@@ -14,6 +14,8 @@ function App() {
 
   }
   const submitHandler = () => {
+    debugger
+    console.log('i submitted')
     setFormValue(initialValue)
   }
   return (

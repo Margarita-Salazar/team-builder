@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-const FormContianer = styled.div`
+const FormContianer = styled.form`
     border: 1px solid darkgrey;
     border-radius: 5px;
     color: #0e2923;
@@ -45,8 +45,9 @@ export default function Form(props) {
         change(name, value);
     }
     const onSubmit = (event) => {
-        event.preventDefault();
+        console.log('potato')
         submit();
+        event.preventDefault();
     }
     return (
         <FormContianer onSubmit={onSubmit}>
@@ -70,7 +71,7 @@ export default function Form(props) {
                 name='role'
                 value={value.role}
                 onChange={onChange}>
-                    <option value="">Select</option>
+                    <option value=''>Select</option>
                     <option value='backend engineer'>backend engineer</option>
                     <option value='frontend engineer'>frontend engineer</option>
                     <option value='designer'>designer</option>
